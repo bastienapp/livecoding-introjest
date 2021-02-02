@@ -1,3 +1,5 @@
+const { getTotalWithTaxes } = require('./cart');
+
 const cart = {
   items: [
     {
@@ -24,5 +26,7 @@ const cart = {
   ],
 };
 
-// expected
-console.log('Total TTC: 2,68 €');
+const total = getTotalWithTaxes(cart);
+console.log(`Total TTC: ${total}`);
+
+// TODO test expected: "Total TTC: 2,68 €"
